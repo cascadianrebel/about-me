@@ -5,7 +5,7 @@
 alert( 'NOTICE: If you don\'t like fun websites, leave now.');
 
 var yorn = ' (Please respond by typing either \'yes\' or   \'no\'';
-var userName = prompt ('What is your name?'+ yorn); 
+var userName = prompt ('What is your name?'); 
 
 alert ('Welome, ' + userName + ', I\'m Anthony. Let\'s get started!');
 

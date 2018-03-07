@@ -1,15 +1,15 @@
 # about-me
-About me project for Week 1 of Code 201. 
+About Me project for Week 1 of Code 201. 
 
-## Game Design
-A guessing game about me that involves FIVE yes/no questions. Be creative and fun and whimsical.
+## Game Mission
+Create a game for a user to test their knowledge of **my** *_fantastic_* life through a series of yes or no questions. 
 
 ## Build Status
-useable but still in-progress
+Useable but still in-progress
 
 ## Acknowledgements
 CSS Reset from Eric Meyer
 * [Eric Meyer reset.css](https://meyerweb.com/eric/tools/css/reset/)
 
 ## License
-open-source; free to use
+**NONE** *_public domain_*

@@ -8,6 +8,7 @@ Create a game for a user to test their knowledge of **my** *_fantastic_* life th
 Useable but still in-progress
 
 ## Example JS
+<!-- figure out how to include the line numbers when including it into the README.md -->
 >var fearQuakes = prompt ('Have I experienced any earthquakes before? ' + yorn);
 >if(fearQuakes.toLowerCase() === 'yes' || fearQuakes.toLowerCase === 'y'){
 >  alert('NOOOO. Maybe if I did, I wouldn\'t be so scared');

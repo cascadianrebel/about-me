@@ -1,4 +1,5 @@
 'use strict';
+var counter= 0;
 alert('NOTICE: If you don\'t like fun websites, leave now.');
 
 var yorn = ' (Please respond by typing either \'yes\' or \'no\')';

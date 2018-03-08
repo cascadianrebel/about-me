@@ -2,7 +2,7 @@
 About Me project for Week 1 of Code 201. 
 
 ## Game Mission
-Create a game for a user to test their knowledge of **my** *_fantastic_* life through a series of yes or no questions. 
+As a student at CodeFellows, I want to make a website that not only promotes my coding skills but also teaches the user something about me in a fun and creative way through the use of a guessing game.
 
 ## Build Status
 Useable but still in-progress

@@ -21,27 +21,28 @@ if (userKnows.toLowerCase() === 'yes' || userKnows.toLowerCase() === 'y') {
     'Aww, I bet you could! I\'m 5\'10" with two different colored eyes behind a pair of silvery glasses'
   );
 }
-if (userKnows.toLowerCase() === 'yes' || userKnows.toLowerCase() === 'y') {
-  var q1 = 1;
-} else {
-  var q1 = 0;
-}
-if (q1 === 1) {
-  console.log(
-    userName.toUpperCase() +
-		' knows what Anthony looks like. '+
-			q1 +
-			'point(s)'
-  );
-}else{
-  console.log(
-    userName.toUpperCase() +
-  ' does not know what Anthony looks like. ' + q1 + 'point(s)');
-}
+//TODO: figure out how to add variables when numbers
+// if (userKnows.toLowerCase() === 'yes' || userKnows.toLowerCase() === 'y') {
+//   var q1 = 1;
+// } else {
+//   var q1 = 0;
+// }
+// if (q1 === 1) {
+//  console.log(
+//     userName.toUpperCase() +
+// 		' knows what Anthony looks like. '+
+// 			q1 +
+// 			'point(s)'
+//   );
+// }else{
+//   console.log(
+//     userName.toUpperCase() +
+//   ' does not know what Anthony looks like. ' + q1 + 'point(s)');
+// }
 
-
-//possibly add a picture of handsome celebrities to an alert with the text that says "try! Do you see him"
-//Q2 - Confirmed
+//TODO:possibly add a picture of handsome celebrities to an alert with the text that says "try! Do you see him"
+//Q2
+//TODO:add up points on console.log
 var seattleLive = prompt(
   'Have I lived in Seattle for less than 3 years? ' + yorn
 );
@@ -54,23 +55,23 @@ if (seattleLive.toLowerCase() === 'yes' || seattleLive.toLowerCase === 'y') {
     'I guess after living in Seattle long enough, I start acting like a Seattleite! I\'ve actually only been living in Ballard for 4 years and I\'m no less scared of earthquakes 4 years later'
   );
 }
-if (seattleLive.toLowerCase() === 'yes' || seattleLive.toLowerCase() === 'y') {
-  var q2 = 0;
-} else {
-  var q2 = 1;
-}
-if (q2 === 1) {
-  console.log(
-    userName.toUpperCase() +
-		' knows Anthony has lived here 4 years. '+
-			q2 +
-			'point(s) for a total of ' + q2 + q1
-  );
-}else{
-  console.log(
-    userName.toUpperCase() +
-  ' does not know what Anthony has lived here for 4 years ' + q1 + q2 + 'point(s)');
-}
+// if (seattleLive.toLowerCase() === 'yes' || seattleLive.toLowerCase() === 'y') {
+//   var q2 = 0;
+// } else {
+//   var q2 = 1;
+// }
+// if (q2 === 1) {
+//   console.log(
+//     userName.toUpperCase() +
+// 		' knows Anthony has lived here 4 years. '+
+// 			q2 +
+// 			'point(s) for a total of ' + q2 + q1
+//   );
+// }else{
+//   console.log(
+//     userName.toUpperCase() +
+//   ' does not know what Anthony has lived here for 4 years ' + q1 + q2 + 'point(s)');
+// }
 
 // //Q3 - confirmed
 var fearQuakes = prompt('Have I experienced any earthquakes before? ' + yorn);
@@ -118,3 +119,22 @@ if (hottyToddy.toLowerCase() === 'yes' || hottyToddy.toLowerCase === 'y') {
 console.log(
   userName + ' knows that I yell at college football games?' + hottyToddy
 );
+//Q6
+//TODO: prompt math problem: randomX * randomY = z; make a loop so the prompt continues until the correct answer is made. User will only have 4 tries.
+// var x = Math.floor(Math.random()*10);
+// console.log('x=' + x);
+// var y = Math.floor(Math.random()*10);
+// console.log('y=' + y);
+//   var mathTest = prompt('Ok, genius. What is ' + x + '*' + y + '? You have four chances.');
+//   console.log('User guessed ' + mathTest);
+//   var z = x*y;
+//   console.log('the  correct answer is ' + z);
+
+// while (mathTest !== z) {
+//   var mathTest = prompt('Ok, genius. What is ' + x + '*' + y + '? You have four chances.'); maxGuess++}
+// if (mathTest === z) { break;}
+// else if (maxGuess > 4) {break;}
+// else {prompt('WRONG!!!!! Try again. What is ' + x + '*' + y + '? You have ' + 4-maxGuess + ' chances.');
+//Q7
+//TODO: Create an array of NHL teams; prompt "who are the original six?"; give six possible tries, the first six of the array are the original six
+var nhl = ['Boston' , 'Chicago' , 'Detroit' , 'Montreal', 'New York', 'Toronto','Anaheim', 'Arizona'];

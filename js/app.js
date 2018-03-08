@@ -22,24 +22,12 @@ if (userKnows.toLowerCase() === 'yes' || userKnows.toLowerCase() === 'y') {
     'Aww, I bet you could! I\'m 5\'10" with two different colored eyes behind a pair of silvery glasses'
   );
 }
-//TODO: figure out how to add variables when numbers
-// if (userKnows.toLowerCase() === 'yes' || userKnows.toLowerCase() === 'y') {
-//   var q1 = 1;
-// } else {
-//   var q1 = 0;
-// }
-// if (q1 === 1) {
-//  console.log(
-//     userName.toUpperCase() +
-// 		' knows what Anthony looks like. '+
-// 			q1 +
-// 			'point(s)'
-//   );
-// }else{
-//   console.log(
-//     userName.toUpperCase() +
-//   ' does not know what Anthony looks like. ' + q1 + 'point(s)');
-// }
+if (userKnows.toLowerCase() === 'yes' || userKnows.toLowerCase() === 'y') {
+  console.log(userName + 'knows Anthony\'s appearance. +1pt');
+  counter++;
+} else {}
+console.log('user\'s score is ' + counter);
+
 
 //TODO:possibly add a picture of handsome celebrities to an alert with the text that says "try! Do you see him"
 //Q2

@@ -1,69 +1,77 @@
 'use strict';
-var counter= 0;
 alert('NOTICE: If you don\'t like fun websites, leave now.');
-
-var yorn = ' (Please respond by typing either \'yes\' or \'no\')';
+var counter= 0;
+var yorn = ' (Please respond by typing either \'yes\' or \'no\')' ;
 var userName = prompt('What is your name?');
-console.log('User\'s name is ' + userName.toUpperCase());
 
-alert(
-  'Welcome, ' + userName.toUpperCase() + ', I\'m Anthony. Let\'s get started!'
-);
+while(userName.length < 1){
+  var noAnswer = prompt('You didn\'t answer. Please enter a response.');
+  userName = prompt('You don\'t have a name? What should we call you?');
+}
+if (userName.length !== 0) {
+  alert('Welcome, ' + userName.toUpperCase() + ', I\'m Anthony. Let\'s get started!' );
+}
 
-//can i insert a button to press to start these questions?
+var UserName = userName.toUpperCase();
+console.log('User\'s name is ' + UserName);
+
+function createQuestion (questionName, questionText, answerY, answerN, noAnswer) {
+  questionName = prompt(questionText);
+  while (questionName.length < 1) {
+    noAnswer;
+    questionName;
+  }
+  if (questionName.charAt(0).toLowerCase() === 'y') {
+    alert(answerY); 
+    counter++;
+    } else {
+      alert(answerN);
+    }
+}
+createQuestion('userknows', 'do you know me ?', 'correct', 'wrong', noAnswer);
+
+
 //Q1- Confirmed
-var userKnows = prompt(
-  'Do you think you could you spot me out of a police line-up? ' + yorn
-);
-if (userKnows.toLowerCase() === 'yes' || userKnows.toLowerCase() === 'y') {
-  alert('Oh yeah? I guess I tend to make myself known');
+var userKnows = prompt('Do you think you could you spot me out of a police line-up? ' + yorn);
+while(userKnows.length < 1) {
+  noAnswer;
+  userKnows;}
+if (userKnows.charAt(0).toLowerCase() === 'y') {
+  alert('Oh yeah? I guess I tend to make myself known. 1pt');
+  console.log(UserName + ' knows Anthony.');
+  counter++;
 } else {
   alert(
-    'Aww, I bet you could! I\'m 5\'10" with two different colored eyes behind a pair of silvery glasses'
-  );
+    'Aww, I bet you could! I\'m 5\'10" with two different colored eyes behind a pair of silvery glasses');
+  console.log(UserName + 'does not know Anthony. 0pts');
 }
-if (userKnows.toLowerCase() === 'yes' || userKnows.toLowerCase() === 'y') {
-  console.log(userName + 'knows Anthony\'s appearance. +1pt');
-  counter++;
-} else {}
-console.log('user\'s score is ' + counter);
-
+console.log(UserName + '\'s score is ' + counter + 'point(s)');
 
 //TODO:possibly add a picture of handsome celebrities to an alert with the text that says "try! Do you see him"
 //Q2
-//TODO:add up points on console.log
-var seattleLive = prompt(
-  'Have I lived in Seattle for less than 3 years? ' + yorn
-);
-if (seattleLive.toLowerCase() === 'yes' || seattleLive.toLowerCase === 'y') {
+var seattleLive = prompt( 'Have I lived in Seattle for less than 3 years? ' + yorn);
+while (seattleLive.length < 1){
+  noAnswer;
+  seattleLive;
+}
+if (seattleLive.charAt(0).toLowerCase === 'y') {
   alert(
-    'Although, I might seem new, I\'ve actually been living in Ballard for 4 years and I\'m no less scared of earthquakes 4 years later'
-  );
+    'Although, I might seem new, I\'ve actually been living in Ballard for 4 years and I\'m no less scared of earthquakes 4 years later. 0pts');
+  console.log(UserName + 'guessed incorrectly. 0pts');
 } else {
   alert(
-    'I guess after living in Seattle long enough, I start acting like a Seattleite! I\'ve actually only been living in Ballard for 4 years and I\'m no less scared of earthquakes 4 years later'
-  );
+    'I guess after living in Seattle long enough, I start acting like a Seattleite! I\'ve actually only been living in Ballard for 4 years and I\'m no less scared of earthquakes 4 years later. Good job +1pt!');
+  console.log(UserName + 'guessed correctly. +1pt');
+  counter++;
 }
-// if (seattleLive.toLowerCase() === 'yes' || seattleLive.toLowerCase() === 'y') {
-//   var q2 = 0;
-// } else {
-//   var q2 = 1;
-// }
-// if (q2 === 1) {
-//   console.log(
-//     userName.toUpperCase() +
-// 		' knows Anthony has lived here 4 years. '+
-// 			q2 +
-// 			'point(s) for a total of ' + q2 + q1
-//   );
-// }else{
-//   console.log(
-//     userName.toUpperCase() +
-//   ' does not know what Anthony has lived here for 4 years ' + q1 + q2 + 'point(s)');
-// }
+console.log(UserName + '\'s score is ' + counter + 'point(s)');
 
 // //Q3 - confirmed
 var fearQuakes = prompt('Have I experienced any earthquakes before? ' + yorn);
+while (fearQuakes.length < 1) {
+  noAnswer;
+  fearQuakes;
+}
 if (fearQuakes.toLowerCase() === 'yes' || fearQuakes.toLowerCase === 'y') {
   alert('NOOOO. Maybe if I did, I wouldn\'t be so scared');
 } else {
@@ -108,11 +116,12 @@ if (hottyToddy.toLowerCase() === 'yes' || hottyToddy.toLowerCase === 'y') {
 console.log(
   userName + ' knows that I yell at college football games?' + hottyToddy
 );
+
 //Q6
 //TODO: prompt math problem: randomX * randomY = z; make a loop so the prompt continues until the correct answer is made. User will only have 4 tries.
-// var x = Math.floor(Math.random()*10);
+// var x = Math.floor(Math.random()*10 + 1);
 // console.log('x=' + x);
-// var y = Math.floor(Math.random()*10);
+// var y = Math.floor(Math.random()*10 + 1);
 // console.log('y=' + y);
 //   var mathTest = prompt('Ok, genius. What is ' + x + '*' + y + '? You have four chances.');
 //   console.log('User guessed ' + mathTest);
@@ -126,4 +135,4 @@ console.log(
 // else {prompt('WRONG!!!!! Try again. What is ' + x + '*' + y + '? You have ' + 4-maxGuess + ' chances.');
 //Q7
 //TODO: Create an array of NHL teams; prompt "who are the original six?"; give six possible tries, the first six of the array are the original six
-var nhl = ['Boston' , 'Chicago' , 'Detroit' , 'Montreal', 'New York', 'Toronto','Anaheim', 'Arizona'];
+//var nhl = ['Boston' , 'Chicago' , 'Detroit' , 'Montreal', 'New York', 'Toronto','Anaheim', 'Arizona'];

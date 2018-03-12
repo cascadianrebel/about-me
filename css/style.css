@@ -1,41 +1,71 @@
 html {
-  height: 100%;
-  padding: 80px;}
-h1 {
-    background-color: Rgba(41,87,57,0.9);
-    padding: 7px;
-    font-size: 35;
-    text-align: Center;
-    border: 10px groove black;
-    display: block;
-    width: auto;
-}
-body {
-    width: auto;
     height: 100%;
-    Background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/2f/Space_Needle002.jpg);
-    min-height: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    padding: 3%;}
+  h1 {
+      background-color: Rgba(41,87,57,0.9);
+      padding: 7px;
+      font-size: 35;
+      text-align: Center;
+      border: 10px groove black;
+      width: 100%;
+      position: static;
+  }
+  body {
+      width: auto;
+      height: 100%;
+      Background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/2f/Space_Needle002.jpg);
+      min-height: 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+  }
+a:link {
+    color: white;
 }
-nav {text-align:center;
-      background-color: Rgba(5,45,45,1);
-      border: 10px groove;
-      font: 25px groove;
-      font-style: bold;}
-section {background-color: Rgba(69,74,92,0.9);
-    border: 10px groove #1a7DE8;
-    width: Auto;
+a:visited {
     color: white;
-    text-align: center;
-    font-size: 18;}
-div {background-color: Rgba(69,74,92,0.9);
-    border: 10px groove #1a7DE8;
-    width: Auto;
+}
+#AnthonySnowPic {
+      border: none;
+      border-radius: 500px;
+      float: left;
+      position: static;
+      max-width: 100%;
+    }
+div {
+        text-align: center;
+        line-height: 35px;
+        font-size: 18;
+        float: left;
+        padding:10px;
+        max-width: 35%;
+     }
+div a {
+    color:white;
+    background:  Rgba(41,87,57,0.9);
+    border:1px solid black;
+    border-radius: 30px;
+    display:inline-block;
+    width: 100%;
+}
+div ul{
+      list-style-type: none;
+  }
+  dt {
+    font-weight:bold
+  } 
+section {
+    background-color: Rgba(69,74,92,0.9);
+    border: 3px solid hsla(199, 29%, 77%, 0.37);
+    border-radius: 25px;
     color: white;
-    text-align: center;
+    text-align: left;
     font-size: 18;
-    border-radius: 10px;}
-/* TODO: change the dl's size and alignment */
+    float: right;
+    padding:10px;
+    width: 55%;
+  }
+  section h2 {
+      text-align: center;
+  }

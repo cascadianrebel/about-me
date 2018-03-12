@@ -122,7 +122,7 @@ while(guessesRemaining > 0) {
     if(correctStateResponses[i].toLowerCase() === stateResponses.toLowerCase()){
       console.log('user guessed ' + stateResponses);
       alert('Correct! I have not yet visited any of the following states: ' + correctStateResponses);
-      score++;
+      counter++;
       guessesRemaining = -1;
       break;
     }

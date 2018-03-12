@@ -1,5 +1,4 @@
 'use strict';
-
 var counter = 0;
 var yorn = ' (Please respond by typing either \'yes\' or \'no\')';
 var userName = prompt('What is your name?');
@@ -21,22 +20,33 @@ function createQuestion(
   questionName,
   questionText,
   answerY,
-  answerN)
+  answerN,
+  ynCorrect)
 {
   questionName = prompt(questionText + yorn);
   while (questionName.length < 1) {
     alert('You didn\'t answer! Please enter a response');
     questionName = prompt(questionText);
   }
-  if (questionName.charAt(0).toLowerCase() === 'y') {
+  if (questionName.charAt(0).toLowerCase() === 'y' && ynCorrect === 'yes') {
     alert(answerY);
     counter++;
     console.log(questionText + ' ' + UserName + ' answered ' + questionName);
-  } else {
+    console.log(UserName + '\'s score is ' + counter + 'point(s)');
+  } if (questionName.charAt(0).toLowerCase() === 'n' && ynCorrect === 'no') {
+    alert(answerN);
+    counter++;
+    console.log(questionText + ' ' + UserName + ' answered ' + questionName);
+    console.log(UserName + '\'s score is ' + counter + 'point(s)');
+  }else if (questionName.charAt(0).toLowerCase() === 'y' && ynCorrect === 'no' ) {
+    alert(answerY);
+    console.log(questionText + ' ' + UserName + ' answered ' + questionName);
+    console.log(UserName + '\'s score is ' + counter + 'point(s)');
+  }else if (questionName.charAt(0).toLowerCase() === 'n' && ynCorrect === 'yes') {
     alert(answerN);
     console.log(questionText + ' ' + UserName + ' answered ' + questionName);
+    console.log(UserName + '\'s score is ' + counter + 'point(s)');
   }
-  console.log(UserName + '\'s score is ' + counter + 'point(s)');
 }
 
 //Q1
@@ -44,7 +54,8 @@ createQuestion(
   'Know Me?',
   'Do you think you could spot me out of a police line-up?',
   'Oh yeah? I guess I tend to make myself known. 1pt',
-  'Aww, I bet you could! I\'m 5\'10 with funky colored eyes behind a pair of silvery glasses.'
+  'Aww, I bet you could! I\'m 5\'10 with funky colored eyes behind a pair of silvery glasses.',
+  'yes'
 );
 
 //TODO:possibly add a picture of handsome celebrities to an alert with the text that says "try! Do you see him"
@@ -53,7 +64,8 @@ createQuestion(
   'Seattle Live',
   'Have I lived in seattle more than 3 years? ',
   'That\'s right! I\'ve been living in Ballard for 4 years. I\'m still terrified of earthquakes,though. 1pt' ,
-  'Although, I might seem new, I\'ve actually been living in Ballard for 4 years and I\'m no less scared of earthquakes 4 years later. 0pts'
+  'Although, I might seem new, I\'ve actually been living in Ballard for 4 years and I\'m no less scared of earthquakes 4 years later. 0pts',
+  'yes'
 );
 
 //Q3
@@ -61,21 +73,24 @@ createQuestion(
   'fearQuakes',
   'Have I experienced any earthquakes before?',
   'OH HELL NO! Maybe if I had, I\'d be less scared 0pts',
-  'Correct! I have not felt the ground shake, but my parents have had two quakes in Madison, MS in the last 4 years. Isn\'t that fracking awesome. 1pt'
+  'Correct! I have not felt the ground shake, but my parents have had two quakes in Madison, MS in the last 4 years. Isn\'t that fracking awesome. 1pt',
+  'no'
 );
 //Q4
 createQuestion(
   'likeNFL',
   'Does Anthony watch the NFL every Sunday in the fall?',
   'Nope! (unless the Saints are on!) I prefer my football games to occur on Saturdays! 0pts',
-  'You\'re correct! I prefer my football games to occure on Saturdays! 1pt'
+  'You\'re correct! I prefer my football games to occure on Saturdays! 1pt',
+  'no'
 );
 //Q5
 createQuestion(
   'hottyToddy',
   'Do I like to yell nonsensical gibberish when watching my Alma Mater\'s football team?',
   'Hell Yeah, Damn Right! Hotty Toddy Gosh Amighty, who the hell are we? HEY! Flim Flam Bim Bam Ole Miss by damn! 1pt',
-  'You\'d be wrong. I love yelling gibberish! Hotty Toddy Gosh Amighty, who the hell are we? HEY! Flim Flam Bim Bam Ole Miss by damn!'
+  'You\'d be wrong. I love yelling gibberish! Hotty Toddy Gosh Amighty, who the hell are we? HEY! Flim Flam Bim Bam Ole Miss by damn!',
+  'yes'
 );
 //Q6
 //prompt math problem: randomX * randomY = z; make a loop so the prompt continues until the correct answer is made. User will only have 4 tries.
@@ -95,6 +110,7 @@ function mathQuestion() {
     if (mathTest === z) {
       alert('You think you are so smart, don\'t you? +1pt');
       alert('It took you ' + i + ' attempts!');
+      counter++;
       break;
     } else if (mathTest !== z && i < 4){
       mathTest = prompt('Let\'s try that again. What is ' + x + '*' + y + '?');
@@ -131,3 +147,4 @@ while(guessesRemaining > 0) {
     alert('Nope, been there, done that!');
   }
 }
+alert ('Congrats, '+ UserName + '! You got ' + counter + ' out of 7 correct!');
